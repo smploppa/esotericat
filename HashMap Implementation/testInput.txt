@@ -1,0 +1,6 @@
+Rect 22 21 8 16 
+FillSquare 21 5 10 true
+Square	14 6 15 
+FillRect 1 2 4 15 true 
+FillSquare 23 18 10 true
+FillSquare 18 23 10 true
