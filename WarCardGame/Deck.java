@@ -1,14 +1,14 @@
-package WarCardGame;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
+package WarCardGame;
+
 /**
  *
- * @author demeter jones
+ * @author Shannon Ploppa
  */
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -20,7 +20,7 @@ public class Deck {
 	Random rnd = new Random(201234);
 
 	public Deck() {
-		cards = new ArrayList<Card>();
+		cards = new ArrayList<>();
 		size = cards.size();
 	}
 
@@ -69,7 +69,7 @@ public class Deck {
 		{
 			Object obj = itr.next();
 			c  = (Card) obj;
-			sb.append(c.toString() + ", ");
+			sb.append(c.toString()).append(", ");
 		}
 		if (sb.length() > 2) {
 			return sb.substring(0, sb.length() -2);
@@ -100,9 +100,9 @@ public class Deck {
 	}
 
 	public static void dealCards(Deck playDeck, Deck p1, Deck p2) {
-		ArrayList<Card> p1Cards = new ArrayList<Card>();
+		ArrayList<Card> p1Cards = new ArrayList<>();
 		p1Cards.addAll(playDeck.getCards());
-		ArrayList<Card> p2Cards = new ArrayList<Card>();
+		ArrayList<Card> p2Cards = new ArrayList<>();
 
 		Iterator<Card> itr;
 		Card c;

@@ -1,5 +1,16 @@
+package WarCardGame;
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author demeter jones
+ */
 import java.util.ArrayList;
-import java.io.InputStreamReader;
 
 public class War {
 	private Deck playDeck;
@@ -33,7 +44,7 @@ public class War {
 		playDeck.shuffleCards();
 		Deck.dealCards(playDeck, player1, player2);
 		p1TopCard = player1.getTopCard();
-		p2TopCard  = player1.getTopCard();
+		p2TopCard  = player2.getTopCard();
 	}
 
 	public War (long randomSeed, int numberOfDecks, int numberOfJokerPairs) {
@@ -207,12 +218,13 @@ public class War {
 		//WarTest();
 		long randomize = 0;
 		try {
-			randomize = new Long(args[0]).longValue();
+			randomize = new Long(2233445).longValue();
 		} catch  (NumberFormatException e) {
 			throw e;
 		}
 		War myWar = new War(randomize);
-		while (!myWar.gameOver()) {
+                myWar.myWarSize();
+		/* while (!myWar.gameOver()) {
 			myWar.playHand();
 			myWar.myWarSize();
 		}
@@ -222,5 +234,6 @@ public class War {
 			myWar.playHand();
 			myWar.myWarSize();
 		}
+                        */
    }
 }
